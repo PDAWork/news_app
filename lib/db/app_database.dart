@@ -14,11 +14,16 @@ import 'package:sqlite3_flutter_libs/sqlite3_flutter_libs.dart';
 
 // Project imports:
 import 'package:news_app/core/logger/logger.dart';
+import 'package:news_app/db/table/index.dart';
 
 part 'app_database.g.dart';
 
 @DriftDatabase(
-  tables: [],
+  tables: [
+    UserTable,
+    NewsTable,
+    NewsCommentsTable,
+  ],
 )
 class AppDatabase extends _$AppDatabase {
   AppDatabase() : super(_openConnection());
