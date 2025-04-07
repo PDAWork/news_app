@@ -14,6 +14,8 @@ import 'package:sqlite3_flutter_libs/sqlite3_flutter_libs.dart';
 
 // Project imports:
 import 'package:news_app/core/logger/logger.dart';
+import 'package:news_app/db/dao/index.dart';
+import 'package:news_app/db/dao/news_comment.dart';
 import 'package:news_app/db/table/index.dart';
 
 part 'app_database.g.dart';
@@ -23,6 +25,11 @@ part 'app_database.g.dart';
     UserTable,
     NewsTable,
     NewsCommentsTable,
+  ],
+  daos: [
+    UserDao,
+    NewsDao,
+    NewsCommentDao,
   ],
 )
 class AppDatabase extends _$AppDatabase {
