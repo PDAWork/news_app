@@ -1,5 +1,6 @@
 // Flutter imports:
 import 'package:flutter/material.dart';
+import 'package:flutter/material.dart';
 
 // Project imports:
 import 'package:news_app/di/app_depends.dart';
@@ -20,6 +21,12 @@ class App extends StatelessWidget {
       depends: depends,
       child: MaterialApp.router(
         routerConfig: AppRouter.router,
+        theme: ThemeData(
+          colorScheme: ColorScheme.fromSeed(
+            seedColor: Colors.red,
+          ),
+        ), // Светлая тема
+        themeMode: ThemeMode.system, // Автоматическое переключение между светлой и темной темами
       ),
     );
   }
